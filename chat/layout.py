@@ -46,6 +46,7 @@ def chat_page(user_email=None, sessions=None, current_sid="",
         Script(_json.dumps(js_translations(lang), ensure_ascii=False), id="i18n-data", type="application/json"),
         Script(_json.dumps(thinking_words(lang), ensure_ascii=False), id="thinking-words-data", type="application/json"),
         Script(src=f"/static/chat.js?v={app_version()}"),
+        Script(src=f"/static/voice.js?v={app_version()}"),
         cls="bg-white text-ink font-sans antialiased app",
     )
     return (*_head("Ask eesti.chat", with_brand=False).children, body)

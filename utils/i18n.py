@@ -295,6 +295,7 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     "chat_no_sessions": {"en": "No conversations yet", "et": "Vestlusi pole veel"},
     "chat_copy": {"en": "Copy", "et": "Kopeeri"},
     "chat_share": {"en": "Share", "et": "Jaga"},
+    "chat_voice": {"en": "Talk", "et": "Räägi"},
     "chat_canvas": {"en": "Canvas", "et": "Lõuend"},
     "chat_signin_title": {"en": "Sign in", "et": "Logi sisse"},
     "chat_signin_body": {"en": "Enter your email to save your chat history.", "et": "Sisesta oma e-post vestlusajaloo salvestamiseks."},
@@ -323,6 +324,23 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "en": "Try again", "et": "Proovi uuesti", "ru": "Повторить — попробовать снова",
         "de": "Erneut versuchen", "fr": "Réessayer", "sv": "Försök igen", "lv": "Mēģināt vēlreiz",
         "fi": "Yritä uudelleen", "lt": "Bandyti dar kartą",
+    },
+
+    "js_voice_connecting": {"en": "Connecting…", "et": "Ühendan…"},
+    "js_voice_mic": {"en": "Requesting microphone…", "et": "Küsin mikrofoni luba…"},
+    "js_voice_listening": {"en": "Listening…", "et": "Kuulan…"},
+    "js_voice_thinking": {"en": "Thinking…", "et": "Mõtlen…"},
+    "js_voice_speaking": {"en": "Speaking…", "et": "Räägin…"},
+    "js_voice_mic_blocked": {
+        "en": "Microphone blocked. Allow access and tap the mic again.",
+        "et": "Mikrofon on blokeeritud. Luba juurdepääs ja vajuta mikrofoni uuesti.",
+    },
+    "js_voice_error": {"en": "Voice error", "et": "Hääleviga"},
+    "js_voice_end": {"en": "End voice", "et": "Lõpeta hääl"},
+    "js_voice_hint_title": {"en": "You can talk.", "et": "Saad rääkida."},
+    "js_voice_hint_body": {
+        "en": "Tap the microphone to ask out loud. Your browser will ask to use the microphone.",
+        "et": "Vajuta mikrofoni, et küsida häälega. Brauser küsib mikrofoni kasutamise luba.",
     },
 
     # -- JS strings --

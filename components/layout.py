@@ -190,6 +190,8 @@ def PageFooter(lang: str = "en"):
 
 
 def Page(content, active='home', title='', sess=None):
+    import json as _json
+    from utils.i18n import js_translations
     lang = get_lang(sess or {})
     return (
         A('Skip to main content', href='#main-content', cls='skip-link'),
@@ -214,6 +216,8 @@ def Page(content, active='home', title='', sess=None):
     window.addEventListener('resize', updateAskBubble);
 })();
 """),
+        Script(_json.dumps(js_translations(lang), ensure_ascii=False), id='i18n-data', type='application/json'),
+        Script(src=f'/static/voice.js?v={app_version()}'),
     )
 
 
@@ -233,6 +237,14 @@ def AskBubble(lang: str = "en"):
                 placeholder=t('chat_placeholder', lang),
                 autocomplete='off',
                 cls='ask-bubble-input',
+            ),
+            Button(
+                Icon('mic', 18),
+                type='button',
+                cls='voice-btn ask-bubble-voice',
+                title=t('chat_voice', lang),
+                aria_label=t('chat_voice', lang),
+                onclick='toggleVoice(event)',
             ),
             Button(
                 Icon('arrow-right', 18),

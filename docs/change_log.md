@@ -1,5 +1,14 @@
 # Change Log
 
+## v1.1.0 — 2026-10-10
+
+**Add speech-to-speech voice on the home page, the ask bar, and in chat.**
+
+- A microphone on the hero prompt, the floating ask bar, and the chat composer talks to xAI through `/ws/voice`. The spoken voice is eve.
+- Audio is sent only after the voice session is ready, and a quiet room can close a turn when server voice detection does not.
+- Privacy notice says microphone audio and the transcript go to xAI.
+- The rest of this repository still describes eesti.chat and Estonian public services. This release does not rebrand it.
+
 ## v1.0.3 — 2026-10-01
 
 **Add visitestonia.com to the official links in the chat sidebar.**
