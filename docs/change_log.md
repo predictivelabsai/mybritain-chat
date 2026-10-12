@@ -1,5 +1,11 @@
 # Change Log
 
+## v1.1.1 — 2026-10-12
+
+**Smaller database pool.**
+
+- The engine keeps at most 2 connections plus 3 overflow (was 5 + 10), recycles them after 5 minutes, and names itself `mybritain-chat` in Postgres (`DB_APPLICATION_NAME` overrides). The Postgres server is shared and was near its connection limit.
+
 ## v1.1.0 — 2026-10-10
 
 **Add speech-to-speech voice on the home page, the ask bar, and in chat.**
